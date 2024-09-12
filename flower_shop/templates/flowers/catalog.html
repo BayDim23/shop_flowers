@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Каталог цветов</title>
+</head>
+<body>
+    <h2>Каталог цветов</h2>
+    <ul>
+        {% for flower in flowers %}
+        <li>
+            <h3>{{ flower.name }}</h3>
+            <p>Цена: {{ flower.price }} руб.</p>
+            <a href="{% url 'place_order' flower.id %}">Купить</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

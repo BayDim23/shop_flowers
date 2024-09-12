@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Оформление заказа</title>
+</head>
+<body>
+    <h2>Вы выбрали {{ flower.name }}</h2>
+    <p>Цена: {{ flower.price }} руб.</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Оформить заказ</button>
+    </form>
+</body>
+</html>
