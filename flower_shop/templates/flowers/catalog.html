@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Каталог цветов</title>
+    <title>Оформление заказа</title>
 </head>
 <body>
-    <h2>Каталог цветов</h2>
-    <ul>
-        {% for flower in flowers %}
-        <li>
-            <h3>{{ flower.name }}</h3>
-            <p>Цена: {{ flower.price }} руб.</p>
-            <a href="{% url 'place_order' flower.id %}">Купить</a>
-        </li>
-        {% endfor %}
-    </ul>
+    <h2>Вы выбрали {{ flower.name }}</h2>
+    <p>Цена: {{ flower.price }} руб.</p>
+    <form method="post">
+        {% csrf_token %}
+        <label for="address">Введите адрес доставки:</label>
+        <input type="text" id="address" name="delivery_address" required>
+        <button type="submit">Оформить заказ</button>
+    </form>
 </body>
 </html>
