@@ -6,7 +6,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 # flowers/views.py
 
-from bot import send_order_to_telegram
+from ..bot2 import send_order_to_telegram
 
 # Функция регистрации
 def register(request):
