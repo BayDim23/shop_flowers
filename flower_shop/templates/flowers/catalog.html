@@ -63,70 +63,46 @@
 </head>
 <body>
 
-
 <!-- Навигационная панель -->
-<nav class="navbar navbar-expand-lg" style="background-color: #28a745;">
-  <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-      <a class="navbar-brand" href="#">Hidden brand</a>
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
-        </li>
-      </ul>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Магазин цветов</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Меню</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Регистрация</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Сделать заказ</a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Поиск</button>
+            </form>
+        </div>
     </div>
-  </div>
 </nav>
-
-<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="../static/images/64.png" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
 
 <!-- Каталог -->
 <div class="container mt-5">
     <h1 class="text-center mb-4">Каталог цветов</h1>
     <div class="row">
 
-
-
         <!-- Карточка цветка -->
         <div class="col-md-4">
             <div class="card m-3">
-                {% load static %}
-                <img src="{% static 'images/1.png' %}" class="card-img-top" alt="Букет пионов">
+                <img src="static/flowers/1.png" class="card-img-top" alt="Букет пионов">
                 <div class="card-body">
                     <h5 class="card-title">Букет пионов</h5>
                     <p class="card-text">Элегантный букет пионов — пышные и ароматные цветы идеально подойдут для любого особого случая. Пионы — символ любви и счастья!</p>
-                   <div class="price py-3"   >
-                   <p class="card-text text-align-center">Цена: <b>5000 руб.</b></p>
-                   </div>
+                    <p class="card-text"><strong>Цена: 5000 руб.</strong></p>
                     <a href="#" class="btn btn-primary w-100">Купить</a>
                 </div>
             </div>
@@ -200,7 +176,7 @@
 </div>
 
 <!-- Футер -->
-<footer class="mt-5  text-light py-4" style="background-color: #28a745;">
+<footer class="mt-5 text-light py-4" style="background-color: #28a745;">
   <div class="container">
     <div class="row">
       <div class="col-md-6">
